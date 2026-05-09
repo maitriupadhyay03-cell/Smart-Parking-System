@@ -20,13 +20,16 @@ The owner side of the app also shows a session summary — so even if you close 
    
     - ## How to run
    
-    - 1. Make sure you have Java and MySQL installed
-      2. 2. Set up the database using the provided SQL file (if included)
-         3. 3. Update the DB connection settings in the source if needed
-            4. 4. Compile and run the main file
-              
-               5. ## Notes
-              
-               6. - Second semester project, still learning Java GUI so some parts of the code are a bit rough
-                  - - The database stores everything so data persists between sessions
-                    - - Might add more features later like a search function or export to PDF
+    - Make sure you have Java and MySQL installed. Then:
+   
+    - Step 1 - Set up the database using the provided SQL file (if included)
+   
+    - Step 2 - Update the DB connection settings in the source if needed
+   
+    - Step 3 - Compile and run the main file
+   
+    - ## Notes
+   
+    - - Second semester project, still learning Java GUI so some parts of the code are a bit rough
+      - - The database stores everything so data persists between sessions
+        - - Might add more features later like a search function or export to PDF
