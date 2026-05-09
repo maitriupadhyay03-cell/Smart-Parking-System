@@ -14,22 +14,18 @@ The owner side of the app also shows a session summary — so even if you close 
 
 ## Tech used
 
-- Java (Swing for GUI)
-- - MySQL (for storing parking data, earnings, session history)
-  - - Card-based layout for the dashboard
-   
-    - ## How to run
-   
-    - Make sure you have Java and MySQL installed. Then:
-   
-    - Step 1 - Set up the database using the provided SQL file (if included)
-   
-    - Step 2 - Update the DB connection settings in the source if needed
-   
-    - Step 3 - Compile and run the main file
-   
-    - ## Notes
-   
-    - - Second semester project, still learning Java GUI so some parts of the code are a bit rough
-      - - The database stores everything so data persists between sessions
-        - - Might add more features later like a search function or export to PDF
+Java with Swing for the GUI, MySQL for the database, and a card-based layout for the parking dashboard.
+
+## How to run
+
+Make sure you have Java and MySQL installed. Then:
+
+Step 1 - Set up the database using the provided SQL file (if included)
+
+Step 2 - Update the DB connection settings in the source if needed
+
+Step 3 - Compile and run the main file
+
+## Notes
+
+Second semester project so the code is still pretty basic in some parts. The database stores everything so data persists between sessions. Might add more features later like a search function or export to PDF.
