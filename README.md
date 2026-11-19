@@ -1,31 +1,29 @@
 # Smart Parking System
 
-This is my second semester Java project. It's a parking management system with a proper GUI, connected to a MySQL database. Took a while to build but I'm pretty happy with how it turned out.
+My second-semester Java project: a desktop app that manages a parking lot, with a Java Swing GUI and a local SQLite database.
 
 ## What it does
+- Park and unpark three vehicle types: cars, motorcycles and trucks
+- A parking receipt on entry; an unparking receipt with the time parked and the fee
+- A dashboard that shows every slot as a card: occupied or free, and free slots per vehicle type
+- Two payment modes: cash and online
+- An owner view with session summaries: earnings are saved in the database, so they are still there after the app is closed and reopened
 
-The system lets you park and unpark three types of vehicles — cars, motorcycles, and trucks. When you park a vehicle, it generates a parking receipt. When you unpark, you get an unparking receipt showing how long the vehicle was parked and how much it costs.
+## Design
+- Object-oriented model: an abstract `Vehicle` with `Car`, `Motorcycle` and `Truck`
+- Singleton: `ParkingLot` (the slots) and `DatabaseManager` (all SQLite reads and writes)
+- Factory: `VehicleFactory` creates the right vehicle from its type
+- Strategy: `ParkingFeeStrategy` / `HourlyRateStrategy` for the fee calculation
+- Custom exceptions: `ParkingFullException`, `VehicleNotFoundException`
+- A UML class diagram is in `FinalProject/Readme and UML/`
 
-There's a dashboard that visually shows all the parking slots as cards — you can see at a glance which slots are occupied and which ones are free, and how many total slots are available for each vehicle type.
-
-For payment, the system supports two methods: cash and online.
-
-The owner side of the app also shows a session summary — so even if you close the app and reopen it, it loads the previous earnings from the database and shows how much money was made from past parking and unparking sessions.
-
-## Tech used
-
-Java with Swing for the GUI, MySQL for the database, and a card-based layout for the parking dashboard.
+## Tech
+Java, Swing, SQLite through JDBC (the database is a local `smartparking.db` file, created on first run; no database server needed).
 
 ## How to run
-
-Make sure you have Java and MySQL installed. Then:
-
-Step 1 - Set up the database using the provided SQL file (if included)
-
-Step 2 - Update the DB connection settings in the source if needed
-
-Step 3 - Compile and run the main file
+1. Open the `FinalProject` folder in Eclipse (or any Java IDE).
+2. Add the SQLite JDBC driver (`sqlite-jdbc` .jar) to the build path.
+3. Run `Main.java`.
 
 ## Notes
-
-Second semester project so the code is still pretty basic in some parts. The database stores everything so data persists between sessions. Might add more features later like a search function or export to PDF.
+A course project, so some parts are still basic. Ideas for later: search, and export of receipts to PDF.
